@@ -10,8 +10,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 1. Create Angular Project -- done
 2. Create Angular component for product-list -- done
-3. Develop TypeScript class for Product --pending
-4. Create Angular service to call REST APIs -- pending
+3. Develop TypeScript class for Product --done
+4. Create Angular service to call REST APIs -- done
 5. Update Angular component to subscribe to data from Angular service -- pending
 6. Display the data in an HTML page -- pending
 7. Add Cross Origin Support to Spring Boot App --- done
