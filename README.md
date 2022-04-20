@@ -15,3 +15,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 5. Update Angular component to subscribe to data from Angular service -- done
 6. Display the data in an HTML page -- done
 7. Add Cross Origin Support to Spring Boot App --- done
+
+# RELEASE 2.0 plans:
+
+1. Online Shop Template Integration -- pending
+2. Search for products by category --pending
+3. Search for products by text box -- pending
+4. Master / detail view of products -- pending
+5. Pagination support for products -- pending
+6. Add products to shopping cart(CRUD) --pending
+7. Shopping cart checkout -- pending
