@@ -18,8 +18,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 # RELEASE 2.0 plans:
 
-1. Online Shop Template Integration -- pending
-2. Search for products by category --pending
+1. Online Shop Template Integration -- done
+2. Search for products by category -- In progress
 3. Search for products by text box -- pending
 4. Master / detail view of products -- pending
 5. Pagination support for products -- pending
