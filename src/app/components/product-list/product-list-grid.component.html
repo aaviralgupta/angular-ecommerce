@@ -1,7 +1,13 @@
 <div class="main-content">
     <div class="section-content section-content-p30">
-        <h4>Category:  {{currentCategoryName}} </h4>
-        <hr>
+        <div *ngIf="!searchFlag; else elseBlock">
+            <h4>Category:  {{currentCategoryName}} </h4>
+            <hr>
+        </div>
+        <ng-template #elseBlock>
+            <h4>Search:  {{searchText}} </h4>
+            <hr>  
+        </ng-template>
         <div class="container-fluid">
             <div class="row">
 

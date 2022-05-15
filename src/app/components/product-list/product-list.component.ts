@@ -13,6 +13,8 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   currentCategoryId : number;
   currentCategoryName : string | null;
+  searchFlag : boolean;
+  searchText: string | null;
   constructor(private productService:ProductService, 
               private route: ActivatedRoute) { }
 
@@ -23,10 +25,30 @@ export class ProductListComponent implements OnInit {
   }
 
   listProducts(){
+    this.searchFlag=this.route.snapshot.paramMap.has('searchText');
+    console.log("searchFlag"+ false);
+    if(this.searchFlag){
+      this.searchText=this.route.snapshot.paramMap.get('searchText');
+      this.handleSearchProduct(this.searchText);
+    }
+    else{
+      this.handlelistProducts();
+    }
+  }
+  handleSearchProduct(searchText: string | null) {
+
+    this.productService.searchProducts(searchText).subscribe(
+      data=> {
+        this.products=data;
+      }
+    );
+
+    
+  }
+  handlelistProducts(){
 
     // check if "id" parameter is available
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
-
     if(hasCategoryId){
       const id = this.route.snapshot.paramMap.get('id');
       // get the "id" param as string and convert it using + symbol to number
