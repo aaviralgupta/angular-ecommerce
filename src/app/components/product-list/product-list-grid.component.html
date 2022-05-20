@@ -25,6 +25,47 @@
                     No Products found!
                 </div>
             </div>
+            <!-- beigin footer -->
+            <div class="footer-pagination">
+                <div class="row">
+                    <div class="col-md-6"></div>
+
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-9" style="padding-left: 30%">
+                                <!-- Added maxSize of 5 tolimit the number of pages shows on screen  -->
+                                <!-- Added boundaryLinks to show buttons which navigate user to 1st and last Page-->
+                                <ngb-pagination [(page)]="thePageNumber"
+                                                [pageSize]="thePageSize"
+                                                [collectionSize]="theTotalElements"
+                                                [maxSize]="5"
+                                                [boundaryLinks]="true"
+                                                (pageChange)="listProducts()">
+
+                                </ngb-pagination>
+                                
+                                <div class="col-md-3 mt-2" style="text-align: right;">
+                                    <span class="mr-2">Page Size</span>
+
+                                    <!-- added $any to suppress error: 
+                                        property 'value' does not exist on type 'eventtarget'.-->
+                                    
+                                    <select (change)="updatePageSize($any($event.target).value)">
+                                        <option selected="true">5</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>50</option>
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end footer -->
         </div>
     </div>
 </div>
