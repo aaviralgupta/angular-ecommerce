@@ -39,20 +39,23 @@ export class ProductListComponent implements OnInit {
       this.handleSearchProduct(this.searchText);
     }
     else{
-      this.handlelistProducts();
+      this.handleListProducts();
     }
   }
   handleSearchProduct(searchText: string | null) {
 
-    this.productService.searchProducts(searchText).subscribe(
+    this.productService.searchProducts(this.thePageNumber - 1, this.thePageSize,searchText).subscribe(
       data=> {
-        this.products=data;
+                this.products = data._embedded.products;
+                this.thePageNumber = data.page.number + 1;
+                this.thePageSize = data.page.size;
+                this.theTotalElements = data.page.totalElements;
       }
     );
 
     
   }
-  handlelistProducts(){
+  handleListProducts(){
 
     // check if "id" parameter is available
     const hasCategoryId: boolean = this.route.snapshot.paramMap.has('id');
@@ -67,7 +70,6 @@ export class ProductListComponent implements OnInit {
       this.currentCategoryId =1; 
       this.currentCategoryName = 'Books';
     }
-
 
     //Check if we havr a different category then previous
     // Note: Angular will reuse a component if it is currently being viewed

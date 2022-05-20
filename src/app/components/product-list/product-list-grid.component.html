@@ -33,10 +33,13 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-9" style="padding-left: 30%">
-                                
+                                <!-- Added maxSize of 5 tolimit the number of pages shows on screen  -->
+                                <!-- Added boundaryLinks to show buttons which navigate user to 1st and last Page-->
                                 <ngb-pagination [(page)]="thePageNumber"
                                                 [pageSize]="thePageSize"
                                                 [collectionSize]="theTotalElements"
+                                                [maxSize]="5"
+                                                [boundaryLinks]="true"
                                                 (pageChange)="listProducts()">
 
                                 </ngb-pagination>
@@ -53,7 +56,7 @@
                                         <option>20</option>
                                         <option>50</option>
                                     </select>
-                                    
+
                                 </div>
 
                             </div>
