@@ -89,4 +89,31 @@ export class CheckoutComponent implements OnInit {
       this.checkoutFormGroup.controls['billingAddress'].reset();
     }
   }
+
+  changeMonthsWithYear(){
+
+    const creditCardFormGroup = this.checkoutFormGroup.get('creditCard');
+
+    const currentYear : number = new Date().getFullYear();
+    const selectedYear : number = Number(creditCardFormGroup?.get('expirationYear'));
+
+    let startMonth : number = 1;
+    if(currentYear != selectedYear){
+      this.formService.getCreditCardMonths(startMonth).subscribe(
+        data => {
+          console.log("Retrieved credit card months: " +JSON.stringify(data));
+          this.creditCardMonths=data;
+      });
+
+    }
+    else{
+      startMonth = new Date().getMonth() + 1;
+      this.formService.getCreditCardMonths(startMonth).subscribe(
+        data => {
+          console.log("Retrieved credit card months: " +JSON.stringify(data));
+          this.creditCardMonths=data;
+      });
+    }
+    
+  }
 }
