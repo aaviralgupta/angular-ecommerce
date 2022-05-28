@@ -24,4 +24,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 4. Master / detail view of products -- done
 5. Pagination support for products -- done
 6. Add products to shopping cart(CRUD) -- done
-7. Shopping cart checkout -- In progress
+7. Shopping cart checkout -- done
