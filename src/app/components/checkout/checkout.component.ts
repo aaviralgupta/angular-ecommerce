@@ -93,6 +93,8 @@ export class CheckoutComponent implements OnInit {
   
   this.getCounties();
 
+  this.updateCartDetails();
+
   }
 
   get firstName(){return this.checkoutFormGroup.get('customer.firstName');}
@@ -194,9 +196,20 @@ export class CheckoutComponent implements OnInit {
       this.formService.getAddressStates(country).subscribe(
         data => this.billingStates=data
       );
-    }
+    } 
+  }
 
-    
-    
+
+  updateCartDetails(){
+
+    // subscribe to total quantity and price
+    this.cartService.totalPrice.subscribe(
+      data => this.totalPrice=data
+    );
+
+    this.cartService.totalQuantity.subscribe(
+      data => this.totalQuantity=data
+    );
+
   }
 }
