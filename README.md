@@ -25,3 +25,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 5. Pagination support for products -- done
 6. Add products to shopping cart(CRUD) -- done
 7. Shopping cart checkout -- done
+
+# RELEASE 3.0 plans:
+
+1. User login/logout security
+2. Provide special access to special VIP page onlyfor aunthenticated customer.
+3. Keep track of order history for registered customers.
