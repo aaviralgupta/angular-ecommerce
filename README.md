@@ -28,9 +28,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 # RELEASE 3.0 plans:
 
-1. User login/logout security
-2. Provide special access to special VIP page onlyfor aunthenticated customer.
-3. Keep track of order history for registered customers.
+1. User login/logout security --done
+2. Provide special access to special VIP page onlyfor aunthenticated customer. -- In progress
+3. Keep track of order history for registered customers. -- pending
 
 ## Code scaffolding
 
