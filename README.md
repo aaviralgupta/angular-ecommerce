@@ -30,7 +30,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 1. User login/logout security --done
 2. Provide special access to special VIP page only for aunthenticated customer. -- done
-3. Keep track of order history for registered customers. -- pending
+3. Keep track of order history for registered customers. -- done
 
 ## Code scaffolding
 
