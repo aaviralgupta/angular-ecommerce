@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  luv2shopeApiUrl: "https://localhost:8443/api"
+
+
 };
 
 /*

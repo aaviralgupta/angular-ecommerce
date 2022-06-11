@@ -32,6 +32,13 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 2. Provide special access to special VIP page only for aunthenticated customer. -- done
 3. Keep track of order history for registered customers. -- done
 
+## HTTPS configurations
+
+Refer to following URL's to check for HTTPS related configuration
+
+https://aboutssl.org/ssl-guide/
+https://github.com/darbyluv2code/fullstack-angular-and-springboot/blob/master/bonus-content/secure-https-communication/openssl-setup.md
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
